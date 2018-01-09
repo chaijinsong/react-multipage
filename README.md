@@ -92,7 +92,7 @@
 > 3.在开发环境中如果想通过地址访问不同的页面，需要修改webpackDevServer.config.js
 * 修改historyApiFallback
 ```js
-    //这里的rewrites:[ {from: /^\/admin.html/, to: '/build/admin.html' }] 数组里面是一个个对象，对象中前面的值是在开发时候访问的路径，例如 npm run start之后会监听 localhost:3000 ，此时在后面加上 /admin.html就会访问admin.html中的内容，默认是访问index.html
+    //这里的rewrites:[ {from: /^\/admin.html/, to: '/build/admin.html' }] 数组里面是一个个对象，对象中前面的值是在开发时候访问的路径，例如 npm run start之后会监听 localhost:3000 ，此时在后面加上 /admin.html就会访问admin.html中的内容，默认是访问index.html；数组中的第二个值是生产环境下的文件的路径。如果有很多页面，就在rewrites中添加更多对象
     historyApiFallback: {
       disableDotRule: true,
       rewrites: [
@@ -100,3 +100,5 @@
       ]
     },
 ```
+
+### 如果对您有用请star一下，还没收到过star呢。。。。。。 thanks!!
